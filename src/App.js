@@ -1,8 +1,10 @@
+import { Box } from "@mui/material";
+
 function App() {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <Box sx={{ bgcolor:'primary.main' }}>
+      <h1>Country Quiz</h1>
+    </Box>
   );
 }
 
