@@ -1,11 +1,15 @@
 import React from 'react';
-import './App.css';
+import Footer from './components/Footer/Footer';
+import QuizBox from './components/QuizBox/QuizBox';
+import { GlobalStyles } from './GlobalStyles';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <>
+      <QuizBox/>
+      <Footer/>
+      <GlobalStyles/>
+    </>
   );
 }
 
