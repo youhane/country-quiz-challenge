@@ -7,6 +7,9 @@ export default function QuizBox() {
     <Wrapper>
         <h2>Kuala Lumpur is the capital of</h2>
         <QuizChoice/>
+        <QuizChoice/>
+        <QuizChoice/>
+        <QuizChoice/>
     </Wrapper>
   )
 }
