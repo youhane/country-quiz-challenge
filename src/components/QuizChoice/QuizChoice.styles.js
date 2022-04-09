@@ -8,13 +8,15 @@ export const Wrapper = styled.button`
     display: flex;
     align-items: center;
     width: 100%;
+    background: white;
+    gap: .5rem;
 
     *{
         border: none;
         color: #6066D0CC;
     }
 
-    :hover, :hover > *{
+    :hover{
         background: #F9A826;
         color: white;
     }

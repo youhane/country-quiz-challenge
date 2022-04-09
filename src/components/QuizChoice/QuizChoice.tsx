@@ -6,9 +6,10 @@ interface QuizChoiceProps{
   choice : string,
   letter: string,
   answer: string,
+  setNextButton: (values: any) => any,
 }
 
-const QuizChoice: React.FC<QuizChoiceProps> = ({choice, letter, answer}) => {
+const QuizChoice: React.FC<QuizChoiceProps> = ({choice, letter, answer, setNextButton}) => {
   const {score, setScore} = useContext(ScoreContext)
 
   const handleClick = (e: any) => {
@@ -18,7 +19,7 @@ const QuizChoice: React.FC<QuizChoiceProps> = ({choice, letter, answer}) => {
   }
   
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setNextButton(true)}>
         <p>{letter}.</p>
         <p>{choice}</p> 
     </Wrapper>

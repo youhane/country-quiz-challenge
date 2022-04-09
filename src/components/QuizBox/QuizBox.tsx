@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import NextButton from '../NextButton/NextButton'
 import QuizChoice from '../QuizChoice/QuizChoice'
 import { Wrapper } from './QuizBox.styles'
 
@@ -12,6 +13,8 @@ interface QuizBoxProps {
 const LETTERS = ['A', 'B', 'C', 'D']
 
 const QuizBox: React.FC<QuizBoxProps> = ({question, choices, answer, setCurrentQuestion}) => {
+  const [nextButton, setNextButton] = useState(false)
+
   return (
     <Wrapper>
         <h2>{question}</h2>
@@ -20,9 +23,11 @@ const QuizBox: React.FC<QuizBoxProps> = ({question, choices, answer, setCurrentQ
             choice={choice}
             letter={LETTERS[index]}
             answer={answer}
+            setNextButton={setNextButton}
             key={index}
           />
         })}
+        {nextButton && <NextButton/>}
     </Wrapper>
   )
 }
