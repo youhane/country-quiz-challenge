@@ -18,10 +18,10 @@ export const Wrapper = styled.button`
 
     :hover{
         background: #F9A826;
-        color: white;
-    }
-
-    :hover{
         border: 2px solid #F9A826;
+        
+        p{
+            color: white;
+        }
     }
 `

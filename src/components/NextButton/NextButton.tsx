@@ -1,14 +1,16 @@
 import React from 'react'
 import { Wrapper } from './NextButton.styles'
 
-interface NextButton {
+interface NextButtonProps {
   
 }
 
-export default function NextButton() {
+const NextButton: React.FC<NextButtonProps> = () => {
   return (
     <Wrapper>
       Next
     </Wrapper>
   )
 }
+
+export default NextButton

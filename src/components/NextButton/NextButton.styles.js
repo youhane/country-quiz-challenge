@@ -12,4 +12,8 @@ export const Wrapper = styled.button`
     font-weight: 700;
     background: #F9A826;
     color: white;
+
+    :hover{
+        background: #E69B22;
+    }
 `
