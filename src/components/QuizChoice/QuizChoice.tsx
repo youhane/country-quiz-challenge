@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { ScoreContext } from '../ScoreContext/ScoreContext'
+import { QuizContext } from '../ScoreContext/QuizContext'
 import { Wrapper } from './QuizChoice.styles'
 
 interface QuizChoiceProps{
@@ -10,7 +10,7 @@ interface QuizChoiceProps{
 }
 
 const QuizChoice: React.FC<QuizChoiceProps> = ({choice, letter, answer, setNextButton}) => {
-  const {score, setScore} = useContext(ScoreContext)
+  const {score, setScore} = useContext(QuizContext)
   const [correctOrNot, setCorrectOrNot] = useState('')
 
   const handleClick = (e: any) => {

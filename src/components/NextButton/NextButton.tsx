@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { QuizContext } from '../ScoreContext/QuizContext'
 import { Wrapper } from './NextButton.styles'
 
-interface NextButtonProps {
-  
-}
+const NextButton = () => {
+  const {currentQuestion, setCurrentQuestion} = useContext(QuizContext)
 
-const NextButton: React.FC<NextButtonProps> = () => {
+  const handleClick = () => {
+    let newQuestion = currentQuestion
+    newQuestion++
+    setCurrentQuestion(newQuestion)
+  }
+
   return (
-    <Wrapper>
+    <Wrapper onClick={() => handleClick()}>
       Next
     </Wrapper>
   )

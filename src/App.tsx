@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Footer from './components/Footer/Footer';
 import QuizBox from './components/QuizBox/QuizBox';
-import { ScoreContext } from './components/ScoreContext/ScoreContext';
+import { QuizContext } from './components/ScoreContext/QuizContext';
 import { GlobalStyles } from './GlobalStyles';
 import { QUESTIONS_DATA } from "./questions";
 
@@ -10,19 +10,18 @@ function App() {
   const [score, setScore] = useState(0)
 
   return (
-    <ScoreContext.Provider value={{ score, setScore }}>
+    <QuizContext.Provider value={{ score, setScore, currentQuestion, setCurrentQuestion }}>
       {score}
       <h1>COUNTRY QUIZ</h1>
       <QuizBox
           question={QUESTIONS_DATA[currentQuestion].question}
           choices={QUESTIONS_DATA[currentQuestion].choices}
           answer={QUESTIONS_DATA[currentQuestion].answer}
-          setCurrentQuestion={setCurrentQuestion}
           key={currentQuestion}
         />
       <Footer/>
       <GlobalStyles/>
-    </ScoreContext.Provider>
+    </QuizContext.Provider>
   );
 }
 

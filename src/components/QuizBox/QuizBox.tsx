@@ -7,12 +7,11 @@ interface QuizBoxProps {
   question : string,
   choices : Array<string>,
   answer : string,
-  setCurrentQuestion: object,
 }
 
 const LETTERS = ['A', 'B', 'C', 'D']
 
-const QuizBox: React.FC<QuizBoxProps> = ({question, choices, answer, setCurrentQuestion}) => {
+const QuizBox: React.FC<QuizBoxProps> = ({question, choices, answer}) => {
   const [nextButton, setNextButton] = useState(false)
 
   return (
