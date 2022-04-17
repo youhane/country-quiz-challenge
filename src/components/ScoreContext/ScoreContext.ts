@@ -1,3 +1,13 @@
-const {createContext} = require("react")
+import { createContext, useContext } from "react"
 
-export const ScoreContext = createContext(0)
+export type ScoreContexxtContent = {
+    score: number
+    setScore: (score: number) => void
+}
+
+export const ScoreContext = createContext<ScoreContexxtContent>({
+    score: 0,
+    setScore: () => {},
+})
+
+export const useScoreContext = () => useContext(ScoreContext)

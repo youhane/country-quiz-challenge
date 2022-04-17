@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import Footer from './components/Footer/Footer';
 import QuizBox from './components/QuizBox/QuizBox';
 import { ScoreContext } from './components/ScoreContext/ScoreContext';
@@ -8,10 +8,10 @@ import { QUESTIONS_DATA } from "./questions";
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
-  const scoreProvider = useMemo(() => ({score: Number, setScore: Object}), [score, setScore])
 
   return (
-    <ScoreContext.Provider value={scoreProvider}>
+    <ScoreContext.Provider value={{ score, setScore }}>
+      {score}
       <h1>COUNTRY QUIZ</h1>
       <QuizBox
           question={QUESTIONS_DATA[currentQuestion].question}
