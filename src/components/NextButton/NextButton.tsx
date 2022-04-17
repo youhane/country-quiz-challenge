@@ -3,17 +3,17 @@ import { QuizContext } from '../ScoreContext/QuizContext'
 import { Wrapper } from './NextButton.styles'
 
 const NextButton = () => {
-  const {currentQuestion, setCurrentQuestion} = useContext(QuizContext)
+  const {currentQuestion, setCurrentQuestion, setisFinished} = useContext(QuizContext)
 
   const handleClick = () => {
     let newQuestion = currentQuestion
     newQuestion++
-    setCurrentQuestion(newQuestion)
+    currentQuestion === 9 ? setisFinished(true) : setCurrentQuestion(newQuestion)
   }
 
   return (
     <Wrapper onClick={() => handleClick()}>
-      Next
+      {currentQuestion === 9 ? "Finish" : "Next"}
     </Wrapper>
   )
 }

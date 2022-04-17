@@ -5,6 +5,8 @@ export type QuizContextType = {
     setScore: (score: number) => void
     currentQuestion: number
     setCurrentQuestion: (currentQuestion: number) => void
+    isFinished: boolean
+    setisFinished: (isFinished: boolean) => void
 }
 
 export const QuizContext = createContext<QuizContextType>({
@@ -12,6 +14,8 @@ export const QuizContext = createContext<QuizContextType>({
     setScore: () => {},
     currentQuestion: 0,
     setCurrentQuestion: () => {},
+    isFinished: false,
+    setisFinished: () => {},
 })
 
 export const useScoreContext = () => useContext(QuizContext)
