@@ -1,6 +1,7 @@
+import { animated } from 'react-spring'
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(animated.div)`
     background: white;
     width: 25%;
     margin: auto;
