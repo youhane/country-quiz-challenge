@@ -35,7 +35,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/youhane/button_challenge/blob/main/images/chrome_zQMVuaXU40.png)
+![screenshot](https://github.com/youhane/country-quiz-challenge/blob/main/images/chrome_fXmAgoS9fy.png)
 
 ### Built With
 
