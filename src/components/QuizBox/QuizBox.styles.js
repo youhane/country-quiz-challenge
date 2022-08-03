@@ -11,4 +11,14 @@ export const Wrapper = styled.div`
         color: #2F527B;
         margin-bottom: 1.5rem;
     }
+
+    @media (max-width: 1024px){
+        width: 40%;
+    }
+
+    @media (max-width: 320px){
+        width: 70%;
+        padding-top: 1rem;
+    }
+
 `
